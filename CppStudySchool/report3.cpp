@@ -16,8 +16,6 @@ public:
 	int id;
 	string* name = new string();
 };
-
-
 // 예금
 class Deposit : public UserInfo{
 private:
@@ -48,7 +46,6 @@ public:
 	}
 	// 예금금액 * 예금이자  * 84.6 
 };
-
 // 적금
 class InstallmentSavings : public UserInfo {
 private :
@@ -107,6 +104,7 @@ int main() {
 		cout << "id :" << savings.id << endl << "name : " << *savings.name << endl;
 		cout << fixed << "최종금액 : " << savings.Calculator();
 	}
-	
 	return 0;
 }
+
+// test
