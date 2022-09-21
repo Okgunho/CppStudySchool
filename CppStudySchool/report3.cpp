@@ -1,8 +1,15 @@
+#if true
+
 #include <iostream>
+
+#define percentage 1
+#define tax 0.846
+#define depositInterest 0.03
+#define savingsInterest 0.04
 
 using namespace std;
 
-class UserInfo 
+class UserInfo
 {
 public:
 	UserInfo() = default;
@@ -16,15 +23,14 @@ public:
 	int id;
 	string* name = new string();
 };
+
+
 // 예금
-class Deposit : public UserInfo{
+class Deposit : public UserInfo {
 private:
-	const float interest = 0.03;
-	const float tax = 0.846;
-	const float percentage = 1;
-	float month;
-	float depositAmount;
-	float moneyWithInterest;
+	double month;
+	double depositAmount;
+	double moneyWithInterest;
 public:
 	Deposit(const UserInfo& userinfo)
 	{
@@ -39,23 +45,20 @@ public:
 		cin >> depositAmount;
 	}
 
-	float Calculator() {
-		float year = month / 12;
-		moneyWithInterest = depositAmount * (percentage + (interest * year) *tax);
+	int Calculator() {
+		double year = month / 12;
+		moneyWithInterest = depositAmount * (percentage + (depositInterest * year) * tax);
 		return moneyWithInterest;
 	}
-	// 예금금액 * 예금이자  * 84.6 
+	// 예금금액 * 예금이자  * 세금
 };
+
 // 적금
 class InstallmentSavings : public UserInfo {
-private :
-	const float interest = 0.04;
-	const float percentage = 1;
-	const float tax = 0.846;
-	float month;
-	float monthly_payment;
-	float principal;
-	float moneyWithInterest;
+private:
+	double month;
+	double monthly_payment;
+	double moneyWithInterest;
 public:
 	InstallmentSavings(const UserInfo& userinfo)
 	{
@@ -70,9 +73,9 @@ public:
 		cin >> monthly_payment;
 	}
 
-	float Calculator(){
-		principal = monthly_payment * month;
-		moneyWithInterest = principal * (percentage + (interest * (month  + 1) / 24 ) * tax );
+	int Calculator() {
+		int principal = monthly_payment * month;
+		moneyWithInterest = principal * (percentage + (savingsInterest * (month + 1) / 24) * tax);
 		return moneyWithInterest;
 	}
 	//세후 적금 실제 이자율 = { 적금 연 이자율×(만기 개월 수 + 1)÷24 }×(1 - 이자소득세율)
@@ -95,16 +98,16 @@ int main() {
 	if (savingKind == 1) {
 		Deposit deposit(userInfo);
 		deposit.Input();
-		cout << "id :" << deposit.id << endl << "name : " << *deposit.name << endl;
+		cout << "id :" << userInfo.id << endl << "name : " << *deposit.name << endl;
 		cout << fixed << "최종금액 : " << deposit.Calculator();
 	}
 	else if (savingKind == 2) {
 		InstallmentSavings savings(userInfo);
 		savings.Input();
-		cout << "id :" << savings.id << endl << "name : " << *savings.name << endl;
+		cout << "id :" << userInfo.id << endl << "name : " << *savings.name << endl;
 		cout << fixed << "최종금액 : " << savings.Calculator();
 	}
 	return 0;
 }
 
-// test
+#endif
