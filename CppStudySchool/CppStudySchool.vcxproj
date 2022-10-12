@@ -139,11 +139,17 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="220921.cpp" />
     <ClCompile Include="220907.cpp" />
     <ClCompile Include="220914.cpp" />
+    <ClCompile Include="221005-2.cpp" />
+    <ClCompile Include="221005.cpp" />
+    <ClCompile Include="221012.cpp" />
+    <ClCompile Include="bus.cpp" />
     <ClCompile Include="report3.cpp" />
     <ClCompile Include="softBank.cpp" />
     <ClCompile Include="twoSavings.cpp" />
+    <ClCompile Include="성우코드수정.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

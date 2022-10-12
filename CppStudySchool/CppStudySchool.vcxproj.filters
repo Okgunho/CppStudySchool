@@ -25,6 +25,9 @@
     <Filter Include="report3">
       <UniqueIdentifier>{ea6972fd-bd62-48ba-a26c-af018f3b4c49}</UniqueIdentifier>
     </Filter>
+    <Filter Include="report4">
+      <UniqueIdentifier>{e0a07b7b-064d-4159-81b9-3671f87e4735}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="softBank.cpp">
@@ -39,8 +42,26 @@
     <ClCompile Include="220914.cpp">
       <Filter>study</Filter>
     </ClCompile>
+    <ClCompile Include="220921.cpp">
+      <Filter>study</Filter>
+    </ClCompile>
+    <ClCompile Include="성우코드수정.cpp">
+      <Filter>study</Filter>
+    </ClCompile>
+    <ClCompile Include="221005.cpp">
+      <Filter>study</Filter>
+    </ClCompile>
+    <ClCompile Include="221005-2.cpp">
+      <Filter>study</Filter>
+    </ClCompile>
+    <ClCompile Include="bus.cpp">
+      <Filter>report4</Filter>
+    </ClCompile>
     <ClCompile Include="report3.cpp">
       <Filter>report3</Filter>
+    </ClCompile>
+    <ClCompile Include="221012.cpp">
+      <Filter>study</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>
