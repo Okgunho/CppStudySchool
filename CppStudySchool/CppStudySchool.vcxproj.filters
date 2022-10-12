@@ -28,6 +28,9 @@
     <Filter Include="report4">
       <UniqueIdentifier>{e0a07b7b-064d-4159-81b9-3671f87e4735}</UniqueIdentifier>
     </Filter>
+    <Filter Include="report5">
+      <UniqueIdentifier>{06f944a3-8d71-4e74-a804-863e05d3f9e1}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="softBank.cpp">
@@ -62,6 +65,9 @@
     </ClCompile>
     <ClCompile Include="221012.cpp">
       <Filter>study</Filter>
+    </ClCompile>
+    <ClCompile Include="insurance.cpp">
+      <Filter>report5</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>

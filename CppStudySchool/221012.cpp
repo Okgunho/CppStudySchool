@@ -1,3 +1,5 @@
+#if false
+
 #include<iostream>
 using namespace std;
 
@@ -58,4 +60,6 @@ void main() {
 	CStudent& person = student;
 	person.SetAge(10);
 	cout << person.GetAge() << endl;
-} 
+}
+
+#endif
